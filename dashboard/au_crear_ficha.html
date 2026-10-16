@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Ficha Médica - Animapp</title>
+    <link rel="icon" type="image/jpeg" href="../img/logo.jpeg">
+    <link rel="stylesheet" href="../css/encabezado.css">
+    <link rel="stylesheet" href="../css/pie.css">
+    <link rel="stylesheet" href="../css/au_crear_ficha.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- BARRA SUPERIOR -->
+    <header class="top-header">
+        <div class="logo-container">
+            <img src="../img/logo.jpeg" alt="Logo Animapp" class="logo-img">
+            <span class="logo-text">Animapp</span>
+        </div>
+
+        <div class="user-actions">
+            <a href="../login/iniciar_sesion.html" class="btn-login">Cerrar Sesión</a>
+        </div>
+    </header>
+
+    <!-- CONTENEDOR DEL FORMULARIO -->
+    <main class="form-container-main">
+        <div class="form-card">
+            
+            <div class="form-header">
+                <h1><i class="fa-solid fa-file-medical"></i> Registrar Ficha Clínica</h1>
+                <a href="auxiliar.html#fichas" class="btn-back">
+                    <i class="fa-solid fa-arrow-left"></i> Volver al Panel
+                </a>
+            </div>
+
+            <form action="auxiliar.html#fichas" method="POST">
+                <div class="form-grid">
+                    
+                    <!-- Ficha ID -->
+                    <div class="form-group full-width">
+                        <label for="ficha_id">Ficha ID</label>
+                        <input type="text" id="ficha_id" name="ficha_id" placeholder="Ej: FIC-2026-004" required>
+                    </div>
+
+                    <!-- Nombre Mascota -->
+                    <div class="form-group">
+                        <label for="nombre_mascota">Nombre de la Mascota</label>
+                        <input type="text" id="nombre_mascota" name="nombre_mascota" placeholder="Ej: Toby" required>
+                    </div>
+
+                    <!-- Especie / Raza -->
+                    <div class="form-group">
+                        <label for="especie_raza">Especie / Raza</label>
+                        <input type="text" id="especie_raza" name="especie_raza" placeholder="Ej: Canino / Beagle" required>
+                    </div>
+
+                    <!-- Propietario -->
+                    <div class="form-group full-width">
+                        <label for="propietario">Nombre del Propietario</label>
+                        <input type="text" id="propietario" name="propietario" placeholder="Ej: Carlos Mendoza" required>
+                    </div>
+
+                    <!-- Teléfono Contacto -->
+                    <div class="form-group full-width">
+                        <label for="telefono">Teléfono de Contacto</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="Ej: 310 123 4567" required>
+                    </div>
+
+                </div>
+
+                <!-- BOTONES DE ACCIÓN -->
+                <div class="form-actions">
+                    <a href="auxiliar.html#fichas" class="btn-cancel">Cancelar</a>
+                    <button type="submit" class="btn-submit">
+                        <i class="fa-solid fa-floppy-disk"></i> Guardar Ficha
+                    </button>
+                </div>
+            </form>
+
+        </div>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie-completo">
+        <div class="pie-container">
+            <div class="pie-columna">
+                <h3>Nosotros</h3>
+                <ul>
+                    <li><a href="../nosotros.html">¿Quiénes somos?</a></li>
+                    <li><a href="#">Nuestros aliados</a></li>
+                </ul>
+            </div>
+            <div class="pie-columna">
+                <h3>Información</h3>
+                <ul>
+                    <li><a href="#">Términos y Condiciones del Sitio</a></li>
+                    <li><a href="#">Política de privacidad y datos</a></li>
+                </ul>
+            </div>
+            <div class="pie-columna">
+                <h3>Contáctanos</h3>
+                <div class="contacto-info">
+                    <p>Localidad de Engativá, Bogotá D.C.</p>
+                    <p>Email: info@alfortanimalcare.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="pie-creditos">
+            <p>&copy; 2026 Alfort Animal Care - Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

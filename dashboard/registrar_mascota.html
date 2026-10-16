@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Mascota - Animapp</title>
+    <link rel="icon" type="image/jpeg" href="../img/logo.jpeg">
+    <link rel="stylesheet" href="../css/encabezado.css">
+    <link rel="stylesheet" href="../css/pie.css">
+    <link rel="stylesheet" href="../css/registrar_mascota.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- BARRA SUPERIOR -->
+    <header class="top-header">
+        <div class="logo-container">
+            <img src="../img/logo.jpeg" alt="Logo Animapp" class="logo-img">
+            <span class="logo-text">Animapp</span>
+        </div>
+
+        <div class="user-actions">
+            <a href="../login/iniciar_sesion.html" class="btn-login">Cerrar Sesión</a>
+        </div>
+    </header>
+
+    <!-- CONTENEDOR DEL FORMULARIO -->
+    <main class="form-container-main">
+        <div class="form-card">
+            
+            <div class="form-header">
+                <h1><i class="fa-solid fa-paw"></i> Registrar Nueva Mascota</h1>
+                <a href="cliente.html#mis-mascotas" class="btn-back">
+                    <i class="fa-solid fa-arrow-left"></i> Volver al Panel
+                </a>
+            </div>
+
+            <form action="cliente.html#mis-mascotas" method="POST">
+                <div class="form-grid">
+                    
+                    <!-- Nombre de la Mascota -->
+                    <div class="form-group full-width">
+                        <label for="nombre">Nombre de la Mascota</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ej: Rocky" required>
+                    </div>
+
+                    <!-- Especie -->
+                    <div class="form-group">
+                        <label for="especie">Especie</label>
+                        <select id="especie" name="especie" required>
+                            <option value="" disabled selected>Seleccione la especie</option>
+                            <option value="Canino">Canino</option>
+                            <option value="Felino">Felino</option>
+                            <option value="Ave">Ave</option>
+                            <option value="Exótico">Exótico / Otro</option>
+                        </select>
+                    </div>
+
+                    <!-- Raza -->
+                    <div class="form-group">
+                        <label for="raza">Raza</label>
+                        <input type="text" id="raza" name="raza" placeholder="Ej: Beagle / Mestizo" required>
+                    </div>
+
+                    <!-- Edad -->
+                    <div class="form-group full-width">
+                        <label for="edad">Edad</label>
+                        <input type="text" id="edad" name="edad" placeholder="Ej: 3 años / 6 meses" required>
+                    </div>
+
+                </div>
+
+                <!-- BOTONES DE ACCIÓN -->
+                <div class="form-actions">
+                    <a href="cliente.html#mis-mascotas" class="btn-cancel">Cancelar</a>
+                    <button type="submit" class="btn-submit">
+                        <i class="fa-solid fa-floppy-disk"></i> Registrar Mascota
+                    </button>
+                </div>
+            </form>
+
+        </div>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie-completo">
+        <div class="pie-container">
+            <div class="pie-columna">
+                <h3>Nosotros</h3>
+                <ul>
+                    <li><a href="../nosotros.html">¿Quiénes somos?</a></li>
+                    <li><a href="#">Nuestros aliados</a></li>
+                </ul>
+            </div>
+            <div class="pie-columna">
+                <h3>Información</h3>
+                <ul>
+                    <li><a href="#">Términos y Condiciones del Sitio</a></li>
+                    <li><a href="#">Política de privacidad y datos</a></li>
+                </ul>
+            </div>
+            <div class="pie-columna">
+                <h3>Contáctanos</h3>
+                <div class="contacto-info">
+                    <p>Localidad de Engativá, Bogotá D.C.</p>
+                    <p>Email: info@alfortanimalcare.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="pie-creditos">
+            <p>&copy; 2026 Alfort Animal Care - Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

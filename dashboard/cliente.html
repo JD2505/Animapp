@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Cliente - Animapp</title>
+    <link rel="icon" type="image/jpeg" href="../img/logo.jpeg">
+    <link rel="stylesheet" href="../css/encabezado.css">
+    <link rel="stylesheet" href="../css/pie.css">
+    <link rel="stylesheet" href="../css/cliente.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- BARRA SUPERIOR (Encabezado) -->
+    <header class="top-header">
+        <div class="logo-container">
+            <img src="../img/logo.jpeg" alt="Logo Animapp" class="logo-img">
+            <span class="logo-text">Animapp</span>
+        </div>
+
+        <div class="search-container">
+            <input type="text" placeholder="Buscar en mis productos o citas..." class="search-input">
+            <button class="search-btn">Buscar</button>
+        </div>
+
+        <div class="user-actions">
+            <a href="#carrito" class="btn-cart">🛒 Carrito</a>
+            <a href="../login/iniciar_sesion.html" class="btn-login">Cerrar Sesión</a>
+        </div>
+    </header>
+
+    <!-- LAYOUT DEL DASHBOARD -->
+    <div class="dashboard-container">
+        
+        <!-- BARRA LATERAL (SIDEBAR) -->
+        <aside class="sidebar">
+            <ul class="sidebar-menu">
+                <li><a href="#resumen" class="active"><i class="fa-solid fa-house"></i> Inicio Cliente</a></li>
+                <li><a href="#mascotas"><i class="fa-solid fa-paw"></i> Mis Mascotas</a></li>
+                <li><a href="#citas"><i class="fa-solid fa-calendar-days"></i> Mis Citas Agendadas</a></li>
+                <li><a href="#compras"><i class="fa-solid fa-bag-shopping"></i> Historial de Compras</a></li>
+                <li><a href="#adopciones"><i class="fa-solid fa-heart"></i> Solicitudes de Adopción</a></li>
+            </ul>
+        </aside>
+
+        <!-- CONTENIDO DEL PANEL -->
+        <main class="main-content">
+            
+            <!-- ENCABEZADO INTERNO DE BIENVENIDA -->
+            <div class="dashboard-header" id="resumen">
+                <div class="client-info">
+                    <h1>Bienvenido a tu Panel Personal</h1>
+                    <p>Gestiona el bienestar de tus mascotas, consultas médicas y tus pedidos en Animapp</p>
+                </div>
+                <div>
+                    <span class="badge-status active"><i class="fa-solid fa-user"></i> Rol: Cliente</span>
+                </div>
+            </div>
+
+            <!-- TARJETAS DE MÉTRICAS -->
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <i class="fa-solid fa-dog metric-icon"></i>
+                    <div class="metric-details">
+                        <h3>2</h3>
+                        <p>Mascotas Registradas</p>
+                    </div>
+                </div>
+                <div class="metric-card accent">
+                    <i class="fa-solid fa-calendar-check metric-icon"></i>
+                    <div class="metric-details">
+                        <h3>1</h3>
+                        <p>Cita Próxima</p>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <i class="fa-solid fa-receipt metric-icon"></i>
+                    <div class="metric-details">
+                        <h3>3</h3>
+                        <p>Compras Realizadas</p>
+                    </div>
+                </div>
+                <div class="metric-card accent">
+                    <i class="fa-solid fa-hand-holding-heart metric-icon"></i>
+                    <div class="metric-details">
+                        <h3>1</h3>
+                        <p>Solicitud de Adopción</p>
+                    </div>
+                </div>
+            </div>
+
+ <!-- SECCIÓN: MIS MASCOTAS REGISTRADAS -->
+<section class="panel-section" id="mis-mascotas">
+    <div class="panel-header-actions">
+        <h2><i class="fa-solid fa-paw"></i> Mis Mascotas Registradas</h2>
+        <a href="registrar_mascota.html" class="btn-action"><i class="fa-solid fa-plus"></i> Registrar Nueva Mascota</a>
+    </div>
+    <table class="admin-table">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Especie</th>
+                <th>Raza</th>
+                <th>Edad</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Rocky</td>
+                <td>Canino</td>
+                <td>Beagle</td>
+                <td>3 años</td>
+                <td><a href="#">Ver Carné de Vacunas</a> | <a href="#">Modificar Info</a></td>
+            </tr>
+            <tr>
+                <td>Milo</td>
+                <td>Felino</td>
+                <td>Mestizo</td>
+                <td>1 año</td>
+                <td><a href="#">Ver Carné de Vacunas</a> | <a href="#">Modificar Info</a></td>
+            </tr>
+            <tr>
+                <td>Luna</td>
+                <td>Canino</td>
+                <td>Golden Retriever</td>
+                <td>5 meses</td>
+                <td><a href="#">Ver Carné de Vacunas</a> | <a href="#">Modificar Info</a></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- SECCIÓN: MIS CITAS RESERVADAS -->
+<section class="panel-section" id="mis-citas">
+    <div class="panel-header-actions">
+        <h2><i class="fa-solid fa-calendar-check"></i> Mis Citas Reservadas</h2>
+        <a href="agendar_cita.html" class="btn-action"><i class="fa-solid fa-plus"></i> Agendar Nueva Cita</a>
+    </div>
+    <table class="admin-table">
+        <thead>
+            <tr>
+                <th>Fecha y Hora</th>
+                <th>Mascota</th>
+                <th>Servicio</th>
+                <th>Especialista / Sede</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>25/09/2026 - 10:00 AM</td>
+                <td>Rocky</td>
+                <td>Consulta General</td>
+                <td>Dr. Carlos Mendoza / Sede Engativá</td>
+                <td><span class="badge badge-confirmada">Confirmada</span></td>
+                <td><a href="#">Ver Detalle</a> | <a href="#">Cancelar</a></td>
+            </tr>
+            <tr>
+                <td>28/09/2026 - 02:30 PM</td>
+                <td>Milo</td>
+                <td>Vacunación</td>
+                <td>Dra. Andrea Gómez / Sede Engativá</td>
+                <td><span class="badge badge-pendiente">Pendiente</span></td>
+                <td><a href="#">Ver Detalle</a> | <a href="#">Cancelar</a></td>
+            </tr>
+            <tr>
+                <td>10/09/2026 - 09:00 AM</td>
+                <td>Rocky</td>
+                <td>Profilaxis Dental</td>
+                <td>Dr. Carlos Mendoza / Sede Engativá</td>
+                <td><span class="badge badge-completada">Completada</span></td>
+                <td><a href="#">Ver Resumen</a></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+
+            <!-- SECCIÓN 3: HISTORIAL DE COMPRAS / PEDIDOS -->
+            <section class="panel-section" id="compras">
+                <div class="panel-header-actions">
+                    <h2><i class="fa-solid fa-bag-shopping"></i> Historial de Compras en la Tienda</h2>
+                    <a href="../tiendaIni.html" class="btn-action"><i class="fa-solid fa-cart-shopping"></i> Ir a la Tienda</a>
+                </div>
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>N° Pedido</th>
+                            <th>Fecha</th>
+                            <th>Productos Comprados</th>
+                            <th>Total</th>
+                            <th>Estado de Envío</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#PED-1045</td>
+                            <td>18 Sep 2026</td>
+                            <td>Comida Perro Adulto 15kg, Arnés Reflectivo</td>
+                            <td>$125.000</td>
+                            <td><span class="badge-status pending">En Camino</span></td>
+                            <td><a href="#">Ver Detalle</a> | <a href="#">Rastrear</a></td>
+                        </tr>
+                        <tr>
+                            <td>#PED-0982</td>
+                            <td>02 Ago 2026</td>
+                            <td>Shampoo Medicado 500ml, Juguete Interactivo</td>
+                            <td>$57.000</td>
+                            <td><span class="badge-status delivered">Entregado</span></td>
+                            <td><a href="#">Descargar Factura</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- SECCIÓN 4: ESTADO DE SOLICITUDES DE ADOPCIÓN -->
+            <section class="panel-section" id="adopciones">
+                <div class="panel-header-actions">
+                    <h2><i class="fa-solid fa-heart"></i> Estado de Solicitudes de Adopción</h2>
+                    <a href="../adopcion.html" class="btn-action"><i class="fa-solid fa-magnifying-glass"></i> Ver Mascotas en Adopción</a>
+                </div>
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Mascota Solicitada</th>
+                            <th>Fundación Aliada</th>
+                            <th>Fecha Solicitud</th>
+                            <th>Estado del Trámite</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>SOL-2026-04</td>
+                            <td>Luna (Gato / 8 meses)</td>
+                            <td>Amigos Peludos Engativá</td>
+                            <td>15 Sep 2026</td>
+                            <td><span class="badge-status pending">En Revisión</span></td>
+                            <td><a href="#">Ver Formulario</a> | <a href="#">Adjuntar Doc</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie-completo">
+        <div class="pie-container">
+            <div class="pie-columna">
+                <h3>Nosotros</h3>
+                <ul>
+                    <li><a href="../nosotros.html">¿Quiénes somos?</a></li>
+                    <li><a href="#">Nuestros aliados</a></li>
+                </ul>
+            </div>
+            <div class="pie-columna">
+                <h3>Información</h3>
+                <ul>
+                    <li><a href="#">Términos y Condiciones del Sitio</a></li>
+                    <li><a href="#">Política de privacidad y datos</a></li>
+                </ul>
+            </div>
+            <div class="pie-columna">
+                <h3>Contáctanos</h3>
+                <div class="contacto-info">
+                    <p>Localidad de Engativá, Bogotá D.C.</p>
+                    <p>Email: info@alfortanimalcare.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="pie-creditos">
+            <p>&copy; 2026 Alfort Animal Care - Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

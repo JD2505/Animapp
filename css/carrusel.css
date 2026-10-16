@@ -1,0 +1,87 @@
+/* Contenedor principal de las cajas */
+.banner-cajas-container {
+    display: flex;
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Caja individual */
+.banner-caja {
+    position: relative;
+    flex: 1;
+    height: 250px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Imagen de fondo */
+.banner-caja img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Capa de fondo oscuro para legibilidad del texto */
+.caja-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 60%, transparent 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.5rem;
+    color: #ffffff;
+}
+
+/* Título */
+.caja-overlay h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+}
+
+/* Texto corto */
+.caja-overlay p {
+    font-size: 0.85rem;
+    color: #e5e7eb;
+    margin-bottom: 0.8rem;
+}
+
+/* Botón interno */
+.btn-caja {
+    align-self: flex-start;
+    background-color: #005f73;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.btn-caja:hover {
+    background-color: #2a9d8f;
+}
+
+/* EFECTO HOVER: Eleva la caja suavemente */
+.banner-caja:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.18);
+}
+
+/* Adaptación para dispositivos móviles */
+@media (max-width: 768px) {
+    .banner-cajas-container {
+        flex-direction: column;
+    }
+}
