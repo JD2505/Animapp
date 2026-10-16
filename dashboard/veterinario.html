@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Veterinario - Animapp</title>
+    <link rel="icon" type="image/jpeg" href="../img/logo.jpeg">
+    <link rel="stylesheet" href="../css/encabezado.css">
+    <link rel="stylesheet" href="../css/pie.css">
+     <link rel="stylesheet" href="../css/veter.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- BARRA SUPERIOR (Encabezado) -->
+    <header class="top-header">
+        <div class="logo-container">
+            <img src="../img/logo.jpeg" alt="Logo Animapp" class="logo-img">
+            <span class="logo-text">Animapp</span>
+        </div>
+
+        <div class="search-container">
+            <input type="text" placeholder="Buscar paciente, historia clínica o diagnóstico..." class="search-input">
+            <button class="search-btn">Buscar</button>
+        </div>
+
+        <div class="user-actions">
+            <a href="../login/iniciar_sesion.html" class="btn-login">Cerrar Sesión</a>
+        </div>
+    </header>
+
+    <!-- LAYOUT DEL DASHBOARD -->
+    <div class="dashboard-container">
+        
+        <!-- BARRA LATERAL (SIDEBAR) -->
+        <aside class="sidebar">
+            <ul class="sidebar-menu">
+                <li><a href="#resumen" class="active"><i class="fa-solid fa-stethoscope"></i> Agenda Médica</a></li>
+                <li><a href="#historias"><i class="fa-solid fa-file-medical"></i> Historias Clínicas</a></li>
+                <li><a href="#vacunas"><i class="fa-solid fa-syringe"></i> Control de Vacunas</a></li>
+                <li><a href="#diagnosticos"><i class="fa-solid fa-notes-medical"></i> Diagnósticos</a></li>
+            </ul>
+        </aside>
+
+        <!-- CONTENIDO DEL PANEL -->
+        <main class="main-content">
+            
+            <!-- ENCABEZADO INTERNO DE BIENVENIDA -->
+            <div class="dashboard-header" id="resumen">
+                <div class="vet-info">
+                    <h1>Bienvenida, Dra. Laura Gómez</h1>
+                    <p>Módulo de atención médica, historias clínicas y registro de diagnósticos</p>
+                </div>
+                <div>
+                    <span class="badge-status active"><i class="fa-solid fa-user-doctor"></i> Rol: Veterinario</span>
+                </div>
+            </div>
+
+            <!-- TARJETAS DE MÉTRICAS -->
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <i class="fa-solid fa-calendar-check metric-icon"></i>
+                    <div class="metric-details">
+                        <h3>6</h3>
+                        <p>Citas Asignadas Hoy</p>
+                    </div>
+                </div>
+                <div class="metric-card accent">
+                    <i class="fa-solid fa-folder-open metric-icon"></i>
+                    <div class="metric-details">
+                        <h3>142</h3>
+                        <p>Historias Clínicas</p>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <i class="fa-solid fa-syringe metric-icon"></i>
+                    <div class="metric-details">
+                        <h3>4</h3>
+                        <p>Vacunaciones del Día</p>
+                    </div>
+                </div>
+                <div class="metric-card accent">
+                    <i class="fa-solid fa-clipboard-check metric-icon"></i>
+                    <div class="metric-details">
+                        <h3>18</h3>
+                        <p>Diagnósticos Este Mes</p>
+                    </div>
+                </div>
+            </div>
+
+ <!-- SECCIÓN: AGENDA DE CONSULTAS MÉDICAS -->
+<section class="panel-section" id="consultas">
+    <div class="panel-header-actions">
+        <h2><i class="fa-solid fa-stethoscope"></i> Consultas Programadas</h2>
+        <a href="atender_consulta.html" class="btn-action"><i class="fa-solid fa-plus"></i> Registrar Consulta</a>
+    </div>
+    <table class="admin-table">
+        <thead>
+            <tr>
+                <th>Hora</th>
+                <th>Paciente</th>
+                <th>Especie / Raza</th>
+                <th>Tutor / Propietario</th>
+                <th>Motivo de Consulta</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>08:00 AM</td>
+                <td>Toby</td>
+                <td>Canino / Beagle</td>
+                <td>Carlos Mendoza</td>
+                <td>Valoración postquirúrgica</td>
+                <td><span class="badge-status active">En Consulta</span></td>
+                <td><a href="#">Atender</a> | <a href="#">Ver Historia</a></td>
+            </tr>
+            <tr>
+                <td>09:30 AM</td>
+                <td>Michi</td>
+                <td>Felino / Siamés</td>
+                <td>Ana María Ruiz</td>
+                <td>Inapetencia y fiebre</td>
+                <td><span class="badge-status pending">En Espera</span></td>
+                <td><a href="#">Atender</a> | <a href="#">Ver Historia</a></td>
+            </tr>
+            <tr>
+                <td>11:00 AM</td>
+                <td>Max</td>
+                <td>Canino / Labrador</td>
+                <td>Sonia Ospina</td>
+                <td>Vacunación Anual</td>
+                <td><span class="badge-status confirmed">Completada</span></td>
+                <td><a href="#">Ver Resumen</a></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+
+ <!-- SECCIÓN: EXPEDIENTES DE HISTORIAS CLÍNICAS -->
+<section class="panel-section" id="historias">
+    <div class="panel-header-actions">
+        <h2><i class="fa-solid fa-notes-medical"></i> Expedientes y Historias Clínicas</h2>
+        <a href="crear_historia.html" class="btn-action"><i class="fa-solid fa-plus"></i> Nueva Historia</a>
+    </div>
+    <table class="admin-table">
+        <thead>
+            <tr>
+                <th>N° Historia</th>
+                <th>Mascota</th>
+                <th>Especie</th>
+                <th>Última Atención</th>
+                <th>Tutor</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>HC-2026-012</td>
+                <td>Toby</td>
+                <td>Canino</td>
+                <td>20/09/2026</td>
+                <td>Carlos Mendoza</td>
+                <td><a href="#">Ver Expediente</a> | <a href="#">Evolución</a></td>
+            </tr>
+            <tr>
+                <td>HC-2026-045</td>
+                <td>Michi</td>
+                <td>Felino</td>
+                <td>15/09/2026</td>
+                <td>Ana María Ruiz</td>
+                <td><a href="#">Ver Expediente</a> | <a href="#">Evolución</a></td>
+            </tr>
+            <tr>
+                <td>HC-2026-089</td>
+                <td>Max</td>
+                <td>Canino</td>
+                <td>01/09/2026</td>
+                <td>Sonia Ospina</td>
+                <td><a href="#">Ver Expediente</a> | <a href="#">Evolución</a></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+ <!-- SECCIÓN: REGISTRO DE VACUNACIÓN -->
+<section class="panel-section" id="vacunacion">
+    <div class="panel-header-actions">
+        <h2><i class="fa-solid fa-syringe"></i> Control y Registro de Vacunas</h2>
+        <a href="registrar_vacuna.html" class="btn-action"><i class="fa-solid fa-plus"></i> Aplicar Vacuna</a>
+    </div>
+    <table class="admin-table">
+        <thead>
+            <tr>
+                <th>Fecha</th>
+                <th>Paciente</th>
+                <th>Vacuna Aplicada</th>
+                <th>Lote / Marca</th>
+                <th>Próximo Refuerzo</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>21/09/2026</td>
+                <td>Toby</td>
+                <td>Antirrábica</td>
+                <td>LT-98234 / Zoetis</td>
+                <td>21/09/2027</td>
+                <td><a href="#">Editar</a> | <a href="#">Ver Carné</a></td>
+            </tr>
+            <tr>
+                <td>18/09/2026</td>
+                <td>Michi</td>
+                <td>Triple Felina</td>
+                <td>LT-44102 / Merck</td>
+                <td>18/09/2027</td>
+                <td><a href="#">Editar</a> | <a href="#">Ver Carné</a></td>
+            </tr>
+            <tr>
+                <td>10/09/2026</td>
+                <td>Max</td>
+                <td>Pentavalente</td>
+                <td>LT-55291 / Virbac</td>
+                <td>10/10/2026</td>
+                <td><a href="#">Editar</a> | <a href="#">Ver Carné</a></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+  <!-- SECCIÓN: REGISTRO DE DIAGNÓSTICOS Y TRATAMIENTOS -->
+<section class="panel-section" id="diagnosticos">
+    <div class="panel-header-actions">
+        <h2><i class="fa-solid fa-file-medical"></i> Registro de Diagnósticos y Tratamientos</h2>
+        <a href="crear_diagnostico.html" class="btn-action"><i class="fa-solid fa-plus"></i> Nuevo Diagnóstico</a>
+    </div>
+    <table class="admin-table">
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Paciente</th>
+                <th>Diagnóstico / Hallazgos</th>
+                <th>Tratamiento Recetado</th>
+                <th>Fecha</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>DX-2026-001</td>
+                <td>Toby</td>
+                <td>Dermatitis atópica aguda por alérgenos ambientales.</td>
+                <td>Apoquel 5mg c/12h x 7 días + Baño medicado semanal.</td>
+                <td>21/09/2026</td>
+                <td><a href="#">Ver Detalle</a> | <a href="#">Imprimir Receta</a></td>
+            </tr>
+            <tr>
+                <td>DX-2026-002</td>
+                <td>Michi</td>
+                <td>Gastroenteritis bacteriana leve con deshidratación (5%).</td>
+                <td>Metronidazol suspensión 0.5ml c/12h x 5 días + Suero oral.</td>
+                <td>19/09/2026</td>
+                <td><a href="#">Ver Detalle</a> | <a href="#">Imprimir Receta</a></td>
+            </tr>
+            <tr>
+                <td>DX-2026-003</td>
+                <td>Max</td>
+                <td>Otitis externa bilateral fúngica (Malassezia).</td>
+                <td>Limpieza ótica con Otoclean + Gotas fúngicas c/12h x 10 días.</td>
+                <td>15/09/2026</td>
+                <td><a href="#">Ver Detalle</a> | <a href="#">Imprimir Receta</a></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+        </main>
+    </div>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie-completo">
+        <div class="pie-container">
+            <div class="pie-columna">
+                <h3>Nosotros</h3>
+                <ul>
+                    <li><a href="../nosotros.html">¿Quiénes somos?</a></li>
+                    <li><a href="#">Nuestros aliados</a></li>
+                </ul>
+            </div>
+            <div class="pie-columna">
+                <h3>Información</h3>
+                <ul>
+                    <li><a href="#">Términos y Condiciones del Sitio</a></li>
+                    <li><a href="#">Política de privacidad y datos</a></li>
+                </ul>
+            </div>
+            <div class="pie-columna">
+                <h3>Contáctanos</h3>
+                <div class="contacto-info">
+                    <p>Localidad de Engativá, Bogotá D.C.</p>
+                    <p>Email: info@alfortanimalcare.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="pie-creditos">
+            <p>&copy; 2026 Alfort Animal Care - Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,278 @@
+/* --- ESTILOS ESPECÍFICOS: GUARDERÍA Y PLANES --- */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Banner Hero */
+.servicio-hero {
+    background: linear-gradient(rgba(0, 95, 115, 0.85), rgba(0, 95, 115, 0.85)), 
+                url('https://images.unsplash.com/photo-1548199973-03cce0bbc87b?q=80&w=1200&auto=format&fit=crop') center/cover no-repeat;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+}
+
+.servicio-hero h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 0.4rem;
+}
+
+.servicio-hero p {
+    font-size: 1rem;
+    color: #e6f4f1;
+}
+
+/* Títulos de Sección */
+.titulo-centrado {
+    text-align: center;
+    margin: 3rem 0 2rem 0;
+}
+
+.badge-subtitulo {
+    background-color: #e6f4f1;
+    color: #005f73;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 0.6rem;
+    text-transform: uppercase;
+}
+
+.titulo-centrado h2 {
+    font-size: 1.8rem;
+    color: #005f73;
+}
+
+.titulo-centrado p {
+    color: #64748b;
+    font-size: 0.95rem;
+}
+
+/* Grilla de Tarjetas de Planes */
+.grid-planes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 3.5rem;
+}
+
+.plan-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.plan-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.plan-card.plan-destacado {
+    border: 2px solid #2a9d8f;
+    background-color: #fafdfc;
+}
+
+.plan-badge {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background-color: #2a9d8f;
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.2rem 0.8rem;
+    border-radius: 12px;
+    text-transform: uppercase;
+}
+
+.plan-header h3 {
+    font-size: 1.4rem;
+    color: #005f73;
+    margin-bottom: 0.3rem;
+}
+
+.plan-precio {
+    color: #2a9d8f;
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.plan-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.plan-features li {
+    font-size: 0.88rem;
+    color: #334155;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    line-height: 1.4;
+}
+
+.plan-features li i.fa-check {
+    color: #2a9d8f;
+    margin-top: 3px;
+}
+
+.plan-features li.disabled {
+    color: #94a3b8;
+    text-decoration: line-through;
+}
+
+.plan-features li i.fa-xmark {
+    color: #cbd5e1;
+    margin-top: 3px;
+}
+
+/* Formulario de Reserva */
+.reserva-seccion {
+    margin-bottom: 4rem;
+}
+
+.form-container-box {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 2.5rem;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+}
+
+.form-header-text h2 {
+    color: #005f73;
+    font-size: 1.6rem;
+    margin-bottom: 0.4rem;
+}
+
+.form-header-text p {
+    color: #64748b;
+    font-size: 0.9rem;
+    margin-bottom: 1.8rem;
+}
+
+.form-seccion-titulo {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #005f73;
+    margin: 1.5rem 0 1rem 0;
+    padding-bottom: 0.4rem;
+    border-bottom: 2px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.form-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.form-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 0.8rem;
+}
+
+.form-group label {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    padding: 0.7rem;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    outline: none;
+    font-family: inherit;
+}
+
+.form-group input:focus, 
+.form-group select:focus, 
+.form-group textarea:focus {
+    border-color: #2a9d8f;
+}
+
+.help-text {
+    font-size: 0.78rem;
+    color: #64748b;
+}
+
+/* Caja de Aviso y Botón */
+.aviso-registro {
+    background-color: #f7faf9;
+    padding: 1.2rem;
+    border-left: 4px solid #2a9d8f;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+}
+
+.aviso-registro p {
+    font-size: 0.85rem;
+    color: #555555;
+    margin-bottom: 1rem;
+}
+
+.btn-agendar-cita {
+    background-color: #005f73;
+    color: #ffffff;
+    padding: 0.85rem 1.6rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-agendar-cita:hover {
+    background-color: #2a9d8f;
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .grid-planes {
+        grid-template-columns: 1fr;
+    }
+    .form-grid-3, .form-grid-2 {
+        grid-template-columns: 1fr;
+    }
+}
